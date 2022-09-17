@@ -29,7 +29,7 @@ header {
 header div {
     width: 120px;
     margin: auto;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    background-image: linear-gradient(90deg, #4c3b7e 0%, #12eb9f 50.52%, #1465dd 100%);
 
     border-radius: 50%;
 
@@ -59,7 +59,7 @@ main {
 
 section {
     color: white;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    background-image: linear-gradient(90deg, #6703da 0%, #d83316 50.52%, #1215cf 100%);
     padding-top: 4px;
     border-radius: 10px;
 
@@ -98,7 +98,22 @@ section ul li:hover {
     transform: scale(1.1)
 }
 
-.games-list img {
+.movies-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.series-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.games-desktop-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.games-mobile-list img {
     width: 90px;
     border-radius: 8px;
 }
