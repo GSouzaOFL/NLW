@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing:  border-box;
+    box-sizing: border-box;
 }
 
 ul {
@@ -9,7 +9,15 @@ ul {
 }
 
 body {
-    font-family: "inter", sans-serif;
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    /*background-repeat: no-repeat;*/
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
     line-height: 160%;
 }
 
@@ -22,43 +30,31 @@ header div {
     width: 120px;
     margin: auto;
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
     border-radius: 50%;
+
     display: flex;
     padding: 4px;
 
     transition: transform .3s;
-
 }
 
 header div:hover {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
-header img {
+header div img {
     width: 100%;
     border-radius: 50%;
-
 }
-
-body {
-     background-image: url(./assets/bg.jpg);
-     background-position: top center;
-     background-size: 100% auto;
-     /* optei por repetir o BG
-     background-repeat: no-repeat;*/
-     background-color: #0b0113;
-}
-
 
 main {
-     max-width: 580px;
-     width: 90%;
-     margin: 32px auto;
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
 
-     display: flex;
-     flex-direction: column;
-     gap: 24px;
-
+    display: grid;
+    gap: 24px;
 }
 
 section {
@@ -67,27 +63,21 @@ section {
     padding-top: 4px;
     border-radius: 10px;
 
+   
 }
 
 section div {
-    background-color: #2a2634;
+    background-color: #2A2634;
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
-
-
 }
 
 section h2 {
-    font-weight: 900;
-    font-size: 24px;
     letter-spacing: -0.47px;
-
 }
 
 section p {
-    font-weight: 400;
-    font-size: 16px;
     letter-spacing: -0.18px;
     color: #A1A1AA;
 }
@@ -101,68 +91,76 @@ section ul {
 }
 
 section ul li {
-    transition:  transform .3s;
+    transition: transform .3s;
 }
 
 section ul li:hover {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
 .games-list img {
     width: 90px;
     border-radius: 8px;
-
 }
 
-.streamers-list img{
-    border-radius: 50%;
+.streamers-list img {
+    border-radius: 50%; 
     width: 70px;
     border: 1px solid #443E54;
 }
 
-/* animação*/
+/* animation */
 
 header div {
-    animation: fromtop .7s 2s backwards;
+    animation: fromTop .7s .2s backwards;
 }
 
 main section {
-    animation: fromBottom .7 backwards;
+    animation: fromBottom .7s backwards;
 }
 
 main section:nth-child(1) {
-    animation-delay: .2s;
-
+    animation-delay: 0;
 }
 
 main section:nth-child(2) {
     animation-delay: .3s;
-    
 }
 
 main section:nth-child(3) {
     animation-delay: .6s;
-    
 }
 
-@keyframes fromtop {
+@keyframes fromTop {
     from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-30px)
     }
-    top {
+
+    to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0)
     }
 }
 
 @keyframes fromBottom {
     from {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateX(-30px)
     }
-    top {
+
+    to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0)
     }
 }
+
+/*.animationFadeInFadeOut{
+    animation: fadeInFadeOut 2s linear infinite;
+}
+
+@keyframes fadeInFadeOut {
+    0% {opacity: 1;}
+    50% {opacity: 0.2;}
+    100% {opacity: 1;}
+}*/
